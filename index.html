@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AURA Comfort — Engineered Sleep</title>
+  <meta
+    name="description"
+    content="AURA Comfort — engineered sleep support designed for alignment, cooling and comfort."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="aura-root">
+
+  <!-- GRAIN -->
+  <div class="grain"></div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+
+    <a href="#" class="brand">
+      AURA <span>Comfort</span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#configurator">customizer</a>
+      <a href="#engineering">engineering</a>
+      <a href="#finder">sleep finder</a>
+      <a href="#reviews">reviews</a>
+    </nav>
+
+    <button class="nav-ar" id="openAR">
+      View in your room
+    </button>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      ☰
+    </button>
+
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#configurator">customizer</a>
+    <a href="#engineering">engineering</a>
+    <a href="#finder">sleep finder</a>
+    <a href="#reviews">reviews</a>
+  </div>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-copy">
+
+      <span class="pill">THE AURA CUSHION — ENGINEERED FOR SLEEP</span>
+
+      <h1>
+        <span class="headline-line">Sleep, held</span>
+        <span class="headline-line">in alignment.</span>
+      </h1>
+
+      <p>
+        Three engineered layers — a breathable cover, a cooling gel matrix,
+        and a contoured memory-foam core — built to keep your spine in one
+        straight line, all night.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-primary" data-scroll="#configurator">
+          Explore 3D customizer
+        </button>
+
+        <button class="btn btn-outline" data-scroll="#finder">
+          Find your sleep alignment
+        </button>
+      </div>
+
+      <div class="hero-features">
+
+        <span>
+          <b>✓</b>
+          Ergonomically certified
+        </span>
+
+        <span>
+          <b>◌</b>
+          100-night trial
+        </span>
+
+        <span>
+          <b>✦</b>
+          Zero-gravity support
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- HERO PILLOW -->
+    <div class="hero-visual">
+
+      <div class="hero-pillow floating">
+
+        <div class="pillow-layer pillow-cover">
+          <span></span>
+        </div>
+
+        <div class="pillow-layer pillow-gel">
+          <span></span>
+        </div>
+
+        <div class="pillow-layer pillow-foam">
+          <span></span>
+        </div>
+
+      </div>
+
+      <div class="hero-shadow"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONFIGURATOR -->
+  <section id="configurator" class="section">
+
+    <div class="section-heading">
+
+      <div>
+        <span class="pill">01 — CONFIGURATOR</span>
+
+        <h2>Build your cushion.</h2>
+      </div>
+
+      <p>
+        Drag to rotate. Slide to separate the structural layers.
+        Select materials and colors to create your ideal Aura cushion.
+      </p>
+
+    </div>
+
+
+    <div class="configurator-grid">
+
+      <!-- PRODUCT VIEW -->
+      <div class="product-stage">
+
+        <div class="stage-label">
+          <span>AURA / 3D VIEW</span>
+          <span id="stageStatus">ASSEMBLED</span>
+        </div>
+
+        <div class="config-pillow" id="configPillow">
+
+          <div
+            class="config-layer cover"
+            data-layer="cover"
+          >
+            <div class="layer-shine"></div>
+          </div>
+
+          <div
+            class="config-layer gel"
+            data-layer="gel"
+          >
+            <div class="gel-channel channel-1"></div>
+            <div class="gel-channel channel-2"></div>
+            <div class="gel-channel channel-3"></div>
+          </div>
+
+          <div
+            class="config-layer foam"
+            data-layer="foam"
+          ></div>
+
+        </div>
+
+        <div class="stage-floor"></div>
+
+        <div class="explode-control">
+
+          <span>assembled</span>
+
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            id="explodeSlider"
+          />
+
+          <span>exploded</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTROLS -->
+      <aside class="config-controls">
+
+        <div class="control-group">
+
+          <div class="control-title">FABRIC</div>
+
+          <div id="materialOptions">
+
+            <button
+              class="material-option active"
+              data-material="silk"
+            >
+              <span>
+                <strong>Obsidian Silk</strong>
+                <small>Mulberry-silk face, cool to the touch.</small>
+              </span>
+              <i>✓</i>
+            </button>
+
+            <button
+              class="material-option"
+              data-material="velvet"
+            >
+              <span>
+                <strong>Midnight Velvet</strong>
+                <small>Deep-pile velvet with directional drape.</small>
+              </span>
+              <i>✓</i>
+            </button>
+
+            <button
+              class="material-option"
+              data-material="bamboo"
+            >
+              <span>
+                <strong>Sand Bamboo</strong>
+                <small>Breathable bamboo-viscose weave.</small>
+              </span>
+              <i>✓</i>
+            </button>
+
+            <button
+              class="material-option"
+              data-material="cashmere"
+            >
+              <span>
+                <strong>Cashmere Knit</strong>
+                <small>Brushed cashmere-cotton blend.</small>
+              </span>
+              <i>✓</i>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="control-group">
+
+          <div class="control-title">COLORWAY</div>
+
+          <div class="color-options">
+
+            <button
+              class="color-dot active"
+              data-color="#15181C"
+              style="background:#15181C"
+              aria-label="Midnight"
+            ></button>
+
+            <button
+              class="color-dot"
+              data-color="#D8C7A8"
+              style="background:#D8C7A8"
+              aria-label="Sand Cashmere"
+            ></button>
+
+            <button
+              class="color-dot"
+              data-color="#8B5C42"
+              style="background:#8B5C42"
+              aria-label="Fired Clay"
+            ></button>
+
+            <button
+              class="color-dot"
+              data-color="#6F8478"
+              style="background:#6F8478"
+              aria-label="Quiet Sage"
+            ></button>
+
+          </div>
+
+          <div class="selected-color" id="selectedColor">
+            Midnight
+          </div>
+
+        </div>
+
+
+        <div class="layer-list">
+
+          <button class="layer-option" data-layer-select="cover">
+            <span class="layer-number">01</span>
+            <span>
+              <strong>Outer cover</strong>
+              <small>
+                Hypoallergenic fabric face, engineered for airflow
+                and a cool first touch.
+              </small>
+            </span>
+          </button>
+
+          <button class="layer-option" data-layer-select="gel">
+            <span class="layer-number">02</span>
+            <span>
+              <strong>Cooling gel matrix</strong>
+              <small>
+                Ventilated channels draw heat away from the
+                contact zone.
+              </small>
+            </span>
+          </button>
+
+          <button class="layer-option" data-layer-select="foam">
+            <span class="layer-number">03</span>
+            <span>
+              <strong>Ergonomic core</strong>
+              <small>
+                High-density memory foam contoured for spinal alignment.
+              </small>
+            </span>
+          </button>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+
+  <!-- ENGINEERING -->
+  <section id="engineering" class="section">
+
+    <span class="pill">02 — ENGINEERING</span>
+
+    <h2 class="section-title">
+      Material science, made legible.
+    </h2>
+
+
+    <div class="bento-grid">
+
+      <article class="bento-card temperature-card">
+
+        <div class="card-top">
+          <span class="card-icon">◉</span>
+
+          <button id="temperatureToggle">
+            day view
+          </button>
+        </div>
+
+        <div>
+
+          <h3>Temperature control</h3>
+
+          <div class="heat-bar" id="heatBar"></div>
+
+          <p id="temperatureText">
+            Ambient daytime surface reading.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="bento-card sustainability">
+
+        <span class="card-icon">◌</span>
+
+        <div>
+
+          <strong class="big-number" id="counter">
+            0%
+          </strong>
+
+          <h3>Organic-certified materials</h3>
+
+          <p>
+            GOTS &amp; OEKO-TEX verified sourcing,
+            cover to core.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="bento-card tilt-card">
+
+        <span class="card-icon">≈</span>
+
+        <div>
+          <h3>Cross-flow ventilation</h3>
+
+          <p>
+            Channel geometry moves air, not just heat,
+            through the gel layer.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="bento-card tilt-card">
+
+        <span class="card-icon">◎</span>
+
+        <div>
+          <h3>Density-mapped foam</h3>
+
+          <p>
+            Firmness varies by zone to match shoulder,
+            neck, and head load.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- SLEEP FINDER -->
+  <section id="finder" class="section">
+
+    <span class="pill">03 — SLEEP FINDER</span>
+
+    <h2 class="section-title">
+      Three questions to your ideal cushion.
+    </h2>
+
+
+    <div class="finder-grid">
+
+      <div class="quiz-card" id="quizCard">
+
+        <div id="quizContent"></div>
+
+      </div>
+
+
+      <div class="finder-product">
+
+        <div class="mini-pillow">
+
+          <div class="mini-cover"></div>
+          <div class="mini-gel"></div>
+          <div class="mini-foam"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COMPARISON -->
+  <section class="section comparison-section">
+
+    <span class="pill">04 — COMPARISON</span>
+
+    <h2 class="section-title">
+      Standard pillow vs. Aura.
+    </h2>
+
+
+    <div class="comparison-slider" id="comparisonSlider">
+
+      <div class="comparison-standard">
+        Standard pillow
+      </div>
+
+      <div
+        class="comparison-aura"
+        id="comparisonAura"
+      >
+        AURA Comfort
+      </div>
+
+      <div
+        class="comparison-handle"
+        id="comparisonHandle"
+      >
+        ↔
+      </div>
+
+    </div>
+
+
+    <div class="metrics-grid">
+
+      <div class="metric">
+        <span>PRESSURE DISTRIBUTION</span>
+        <del>Uneven, single points of load</del>
+        <strong>Zone-mapped, zero pressure points</strong>
+      </div>
+
+      <div class="metric">
+        <span>LONGEVITY</span>
+        <del>Flattens within 8–12 months</del>
+        <strong>Retains loft past 3 years</strong>
+      </div>
+
+      <div class="metric">
+        <span>SPINAL ALIGNMENT</span>
+        <del>No structural support</del>
+        <strong>Cervical-curve contour matched</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="section reviews-section">
+
+    <span class="pill">05 — VERIFIED SLEEPERS</span>
+
+    <div class="reviews-heading">
+
+      <h2 class="section-title">
+        What people wake up to.
+      </h2>
+
+      <div class="review-filters" id="reviewFilters"></div>
+
+    </div>
+
+
+    <div class="review-box">
+
+      <div class="stars" id="reviewStars"></div>
+
+      <blockquote id="reviewText"></blockquote>
+
+      <div class="review-author" id="reviewAuthor"></div>
+
+    </div>
+
+
+    <div class="review-arrows">
+
+      <button id="reviewPrev">←</button>
+      <button id="reviewNext">→</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="final-cta">
+
+    <span class="pill">A BETTER NIGHT STARTS HERE</span>
+
+    <h2>
+      Sleep deeper.<br>
+      Wake aligned.
+    </h2>
+
+    <p>
+      Engineered comfort for every sleeping position.
+    </p>
+
+    <button class="btn btn-primary" data-scroll="#finder">
+      Find your Aura
+    </button>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-brand">
+      AURA <span>Comfort</span>
+    </div>
+
+    <p>
+      Engineered sleep support. Designed and assembled with
+      organic-certified materials. 100-night trial on every order.
+    </p>
+
+  </footer>
+
+
+  <!-- AR MODAL -->
+  <div class="modal" id="arModal">
+
+    <div class="modal-box">
+
+      <button class="modal-close" id="closeAR">
+        ×
+      </button>
+
+      <span class="pill">AURA AR</span>
+
+      <h2>
+        View in your room.
+      </h2>
+
+      <div class="qr-code" id="qrCode"></div>
+
+      <p>
+        Scan with your phone camera to place the Aura Cushion
+        in your space with AR QuickLook.
+      </p>
+
+      <button class="btn btn-primary full" id="continueAR">
+        Continue on this device
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
